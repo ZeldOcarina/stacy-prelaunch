@@ -55,14 +55,6 @@ export default function countdown() {
       })
       .join("")}
       <div class="countdown__label">Minutes</div>
-    </div>
-    <div class="countdown__figures-container">
-    ${secondsArr
-      .map((figure) => {
-        return /*html*/ `<span class="countdown__input">${figure}</span>`;
-      })
-      .join("")}
-      <div class="countdown__label">Seconds</div>
     </div>`;
 
     // If the count down is finished, write some text
