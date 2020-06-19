@@ -4,7 +4,8 @@
   background-repeat: no-repeat;
   background-position: center;
   width: 100vw;
-  height: 100vh;
+  // background-image: url("../../assets/logos/Stacey-power.PNG");
+  height: 115vh;
   color: $white;
 
   @include respond(tab-port) {
@@ -303,5 +304,269 @@
         text-align: center;
       }
     }
+  }
+}
+
+body{
+  overflow-x: hidden;
+}
+.hero-second
+{
+  background-image: url("https://cdn.salesjet.io/122/funnel_files/1119/151_hero.8f275ab7d9e8885bd9626ce179102b4c.jpg");
+  height: 600px;
+  background-size: 100vw;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100vw;
+  color: $white;
+  
+}
+
+.hero__big-title
+{
+  position: relative;
+  right: 0rem !important;
+ 
+  line-height: 5rem !important;
+  text-align: right;
+  width: fit-content;
+  font-weight: bold;
+  font-size: 61px !important;
+}
+
+.container {
+  width: 1140px;
+  margin: 0 auto;
+}
+
+.left-container {
+  max-width: 400px;
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+
+.right-container
+{
+  max-width: 400px;
+  padding-top: 100px;
+  padding-bottom: 50px;
+  float: right;
+  text-align: right; 
+  
+}
+
+p.sub-hero-para {
+  /* font-family: Lato; */
+  font-size: 13px;
+  letter-spacing: 0;
+  line-height: 20px;
+  padding-bottom: 25px;
+}
+
+button.btn-learn {
+  height: 40px;
+  width: 220px;
+  border: 1px solid #FFFFFF;
+  border-radius: 2px;
+  background: transparent;
+  color: #fff;
+  margin-top: 40px;
+  
+}
+
+h1.head-fransis {
+  color: #FFFFFF;
+  /* font-family: Gotham; */
+  font-size: 32px;
+  font-weight: bold;
+  letter-spacing: -0.77px;
+  line-height: 44px;
+  padding-bottom: 30px;
+}
+
+p.second-para {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.86px;
+  line-height: 10px;
+}
+
+
+@media(min-width:768px) and (max-width:1024px)
+{
+ 
+  body
+  {
+    overflow-x: hidden !important;
+  }
+  .hero__right-container
+  {
+    right:0 !important;
+  }
+  .hero
+  {
+    width: 111vw !important;
+    background-size: 120vw !important;
+    height: 95vh;
+  }
+  .hero-second
+   {
+    width: 111vw !important;
+    background-size: 118vw !important;
+
+   }
+   .hero__right-container
+   {
+     position: absolute;
+    top: 5.1rem!important;
+   }
+   .left-container
+   {
+     padding-left: 70px;
+   }
+   .right-container
+   {
+     padding-right: 70px;
+   }
+}
+
+@media (min-width: 768px) and (max-width: 812px)
+{
+.hero-second {
+    width: 148vw !important;
+    background-size: 149vw !important;
+}
+}
+
+@media(max-width:767px)
+{
+
+  html
+  {
+    overflow-x: hidden;
+  }
+  .right-container
+  {
+    width: 30%;
+    text-align: left;
+    padding-left: 30px;
+    float: left;
+  }
+  
+  
+}
+
+.hero__right-container {
+  position: absolute;
+  top: 2rem !important;
+  right: 20rem;
+  width: 25rem;
+  text-align: right;
+}
+
+p.hero__paragraph1 {
+  font-size: 14px;
+  padding-top: 30px;
+}
+
+h2.hero__big-title1 {
+  line-height: 10px;
+  padding-bottom: 20px;
+}
+
+
+@media(min-width:768px) and (max-width:775px)
+{
+
+  .hero {
+    width: 149vw !important;
+    background-size: 189vw !important;
+    height: 70vh;
+}
+.hero__right-container {
+  right: -25rem !important;
+}
+.hero__small-container {
+
+  bottom: 0rem !important;
+  left: 80% !important;
+  transform: translateX(-50%);
+}
+}
+
+@media(max-width:767px)
+{
+  .hero-second
+  {
+    background-size: cover !important;
+    height: 105vh !important;
+  }
+  .left-container
+  {
+    padding-left: 30px;
+    width: 30%;
+  }
+  .hero__right-container
+  {
+    right: 0 !important;
+    text-align: center !important;
+    width: auto !important;
+  }
+  .hero__big-title
+  {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+}
+
+
+p.hero__paragraph {
+  /* font-family: Lato; */
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 17px;
+
+}
+@media(min-width:768px)
+{
+.hero__right-container
+{
+  width: 30rem!important;
+}
+
+}
+
+@media(min-width:768px)
+{
+  .right-container
+  {
+    padding-right: 100px;
+  }
+}
+
+@media(min-width: 1440px) and (max-width: 1599px)
+{
+  .hero
+  {
+    height: 105vh !important;
+  }
+  .hero__right-container
+  {
+    right: 21rem !important;
+  }
+}
+
+@media(min-width: 1600px) and (max-width: 1920px)
+{
+  .hero
+  {
+    height: 95vh !important;
+
+  }
+  .hero__right-container
+  {
+    right: 23rem !important;
   }
 }
