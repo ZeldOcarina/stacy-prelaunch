@@ -1,5 +1,5 @@
 .hero {
-  background-image: url("https://cdn.salesjet.io/122/funnel_files/1119/151_hero.8f275ab7d9e8885bd9626ce179102b4c.jpg");
+  background-image: url("https://stacy-apg.s3.amazonaws.com/stacy-power.png");
   background-size: 100vw;
   background-repeat: no-repeat;
   background-position: center;
@@ -312,14 +312,19 @@ body{
 }
 .hero-second
 {
-  background-image: url("https://cdn.salesjet.io/122/funnel_files/1119/151_hero.8f275ab7d9e8885bd9626ce179102b4c.jpg");
+  background-image: url("https://stacy-apg.s3.amazonaws.com/Stacey-power.png");
   height: 600px;
   background-size: 100vw;
   background-repeat: no-repeat;
   background-position: center;
   width: 100vw;
   color: $white;
-  
+      margin-top: -6px;
+}
+.hero-second1
+{
+ background-image: url("https://stacy-apg.s3.amazonaws.com/stacy-pink-bg.png") !important;	
+     margin-top: -11px;
 }
 
 .hero__big-title
@@ -413,7 +418,12 @@ p.second-para {
    {
     width: 111vw !important;
     background-size: 118vw !important;
+    margin-top: -40px;
 
+   }
+   .hero-second1
+   {
+       margin-top: -79px !important;
    }
    .hero__right-container
    {
@@ -434,7 +444,7 @@ p.second-para {
 {
 .hero-second {
     width: 148vw !important;
-    background-size: 149vw !important;
+    background-size: 156vw !important;
 }
 }
 
@@ -484,13 +494,18 @@ h2.hero__big-title1 {
     height: 70vh;
 }
 .hero__right-container {
-  right: -25rem !important;
+  right: 36px !important;
+  text-align: center;
 }
 .hero__small-container {
 
   bottom: 0rem !important;
   left: 80% !important;
   transform: translateX(-50%);
+}
+.hero__countdown-container
+{
+	    right: 20px !important;
 }
 }
 
