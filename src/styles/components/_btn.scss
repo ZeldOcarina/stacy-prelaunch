@@ -1,0 +1,17 @@
+.btn {
+  box-sizing: border-box;
+  height: 5rem;
+  width: 22rem;
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+  background-color: transparent;
+  color: white;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    color: grey;
+    transform: translateY(-6px);
+    cursor: pointer;
+    background-color: #ffffff;
+  }
+}

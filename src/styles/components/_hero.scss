@@ -1,605 +1,125 @@
 .hero {
-  background-image: url("https://stacy-apg.s3.amazonaws.com/stacy-power.jpg");
-  background-size: 100vw;
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 100vw;
-  // background-image: url("../../assets/logos/Stacey-power.PNG");
-  height: 115vh;
-  color: $white;
+  background-image: url("../assets/images/hero.jpg");
+  background-size: cover;
+  background-position: top;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+
+  @include respond(tab-land) {
+    background-image: url("../assets/images/media-queries/hero-tab-land.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+  }
 
   @include respond(tab-port) {
-    background-size: cover;
-    background-repeat: auto;
-    display: flex;
-    flex-direction: column;
+    background-image: url("../assets/images/media-queries/hero-tab-port.jpg");
   }
 
   @include respond(phone-land) {
-    height: 168vh;
-    background-size: cover;
-    background-position: center;
-    min-height: max-content;
+    background-image: url("../assets/images/media-queries/hero-tab-land.jpg");
+    background-position: right;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 2rem;
   }
 
   @include respond(phone-port) {
-    height: 145vh;
-    background-size: cover;
-    background-position: center;
-    min-height: max-content;
+    background-image: url("../assets/images/media-queries/hero-tab-port.jpg");
+    background-position: left;
+    justify-content: flex-end;
+    align-items: flex-start;
   }
 
-  @include respond(iphone-7) {
-    height: 155vh;
+  &__text-container {
+    width: 40rem;
+    height: max-content;
+    margin: 10% 10% 0 0;
+
+    @include respond(laptop) {
+      margin: 10% 7% 0 0;
+    }
+
+    @include respond(tab-land) {
+      margin: 13% 7% 0 0;
+    }
+
+    @include respond(tab-port) {
+      width: 100%;
+      text-align: center;
+      margin: 8rem 0;
+    }
+
+    @include respond(phone-land) {
+      width: 43%;
+      text-align: right;
+      margin: 0;
+      margin-right: 4rem;
+    }
+
+    @include respond(phone-port) {
+      width: 100%;
+      text-align: center;
+      margin: 3rem 0;
+    }
   }
 
-  @include respond(iphone-5) {
-    height: 165vh;
+  &__second-text-container {
+    margin-top: 6rem;
+
+    @include respond(phone-land) {
+      margin-top: 3rem;
+    }
   }
 
   &__paragraph {
+    font-size: 1.8rem;
+
+    @include respond(phone-land) {
+      font-size: 1.6rem;
+    }
+
     @include respond(iphone-5) {
       font-size: 1.4rem;
     }
   }
 
-  &__logo {
-    position: absolute;
-    right: 5rem;
-    top: 4rem;
-    width: 8rem;
-
-    @include respond(laptop) {
-      right: 50%;
-      transform: translateX(50%);
-    }
-
-    @include respond(tab-land) {
-      width: 6rem;
-    }
-
-    @include respond(tab-port) {
-      position: absolute;
-      top: 3rem;
-      left: 0;
-    }
+  &__author {
+    font-size: $sub-header;
+    margin-top: 1rem;
 
     @include respond(phone-land) {
-      top: 2rem;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-
-    @include respond(phone-port) {
-      position: static;
-      transform: translate(0);
-      margin: 2rem auto 0 auto;
-    }
-  }
-
-  &__left-container {
-    position: absolute;
-    top: 8rem;
-    left: 23rem;
-    width: 32rem;
-
-    @include respond(laptop) {
-      left: 10rem;
-    }
-
-    @include respond(tab-land) {
-      top: 3rem;
-      left: 8rem;
-    }
-
-    @include respond(tab-port) {
-      position: static;
-      margin-top: 2rem;
-      text-align: center;
-      width: 100%;
-      top: 0;
-    }
-
-    @include respond(phone-land) {
-      position: absolute;
-      top: 1rem;
-      left: 3rem;
-      width: 20rem;
-      text-align: left;
-    }
-
-    @include respond(phone-port) {
-      position: static;
-      margin-top: 0;
-      text-align: center;
-      width: 85%;
-      top: 0;
-      margin: 0 auto;
-    }
-  }
-
-  &__right-container {
-    position: absolute;
-    top: 12rem;
-    right: 23rem;
-    width: 25rem;
-    text-align: right;
-
-    @include respond(laptop) {
-      top: 8rem;
-      right: 10rem;
-    }
-
-    @include respond(tab-land) {
-      right: 8rem;
-    }
-
-    @include respond(tab-port) {
-      position: static;
-      text-align: center;
-      width: 100%;
-    }
-
-    @include respond(phone-land) {
-      position: absolute;
-      text-align: right;
-      right: 3rem;
-      top: 1rem;
-      width: 25rem;
-    }
-
-    @include respond(phone-port) {
-      position: static;
-      text-align: center;
-      width: 85%;
-      margin: 0 auto;
-    }
-  }
-
-  &__small-title {
-    font-size: 6rem;
-    line-height: 6rem;
-
-    @include respond(tab-port) {
       font-size: 4rem;
     }
 
-    @include respond(phone-land) {
-      font-size: 3rem;
-      line-height: 3.5rem;
-    }
-
     @include respond(iphone-5) {
-      font-size: 2.5rem;
-    }
-
-    &--apg {
-      width: 80%;
-
-      @include respond(tab-port) {
-        width: 100%;
-      }
-    }
-
-    &--stacy {
-      margin-bottom: 4rem;
-
-      @include respond(tab-port) {
-        margin-bottom: 2rem;
-      }
-
-      @include respond(phone-land) {
-        margin-bottom: 0;
-      }
+      font-size: 3.5rem;
     }
   }
 
-  &__big-title {
-    position: relative;
-    right: 11rem;
+  &__headline {
     font-size: 8rem;
-    line-height: 8rem;
-    text-align: right;
-    width: min-content;
-
-    @include respond(tab-land) {
-      font-size: 6rem;
-      right: 3rem;
-      line-height: 6rem;
-    }
-
-    @include respond(tab-port) {
-      width: 100%;
-      text-align: center;
-      position: static;
-    }
+    margin-top: 2rem;
 
     @include respond(phone-land) {
-      text-align: right;
-      position: static;
-      font-size: 4rem;
-      line-height: 5rem;
-      margin-bottom: 0rem;
+      margin-top: 2rem;
+      font-size: 5.5rem;
     }
 
     @include respond(phone-port) {
-      width: 100%;
-      text-align: center;
-      position: static;
-      margin-top: 25rem;
+      font-size: 4.5rem;
     }
 
-    @include respond(iphone-7) {
-      margin-top: 12rem;
+    @include respond(phone-port) {
+      font-size: 5rem;
     }
 
     @include respond(iphone-5) {
-      margin-top: 14rem;
+      font-size: 4rem;
+      line-height: 1.2;
+      margin-top: 1.5rem;
     }
-  }
-
-  &__small-container {
-    width: 40%;
-
-    @include respond(tab-port) {
-      width: 45%;
-      position: absolute;
-      bottom: 5rem;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-
-    @include respond(phone-land) {
-      position: relative;
-      width: 100%;
-      margin-right: 20rem;
-    }
-
-    @include respond(phone-port) {
-      width: 100%;
-      position: static;
-      margin: 0 auto;
-      transform: translateX(0);
-    }
-  }
-
-  &__countdown-container {
-    position: absolute;
-    right: 0;
-    margin-top: 3rem;
-    text-align: center;
-
-    @include respond(tab-land) {
-      margin-top: 2rem;
-    }
-
-    @include respond(tab-port) {
-      position: static;
-    }
-
-    @include respond(phone-land) {
-      position: absolute;
-      right: 0;
-    }
-
-    @include respond(phone-port) {
-      position: static;
-      right: 0;
-      width: 100%;
-    }
-
-    &--intro {
-      font-size: 1.8rem;
-
-      @include respond(phone-land) {
-        font-size: 1.6rem;
-        margin-top: 5rem;
-        margin-bottom: 1rem;
-        text-align: right;
-      }
-
-      @include respond(phone-port) {
-        margin-top: 0;
-        margin-bottom: 1rem;
-        text-align: center;
-      }
-    }
-  }
-}
-
-body{
-  overflow-x: hidden;
-}
-.hero-second
-{
-  background-image: url("https://stacy-apg.s3.amazonaws.com/stacy-apg.jpg");
-  height: 750px;
-  background-size: 123vw;
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 100vw;
-  color: $white;
-      margin-top: -15px;
-}
-.hero-second1
-{
- background-image: url("https://stacy-apg.s3.amazonaws.com/stacy-pink-bg.jpg") !important;	
- background-size: 150vw !important;
- height: 750px !important;
-}
-
-.hero__big-title
-{
-  position: relative;
-  right: 0rem !important;
- 
-  line-height: 5rem !important;
-  text-align: right;
-  width: fit-content;
-  font-weight: bold;
-  font-size: 61px !important;
-}
-
-.container {
-  width: 1140px;
-  margin: 0 auto;
-}
-
-.left-container {
-  max-width: 400px;
-  padding-top: 100px;
-  padding-bottom: 50px;
-}
-
-.right-container
-{
-  max-width: 400px;
-  padding-top: 100px;
-  padding-bottom: 50px;
-  float: right;
-  text-align: right; 
-  
-}
-
-p.sub-hero-para {
-  /* font-family: Lato; */
-  font-size: 13px;
-  letter-spacing: 0;
-  line-height: 20px;
-  padding-bottom: 10px;
-}
-
-button.btn-learn {
-  height: 40px;
-  width: 220px;
-  border: 1px solid #FFFFFF;
-  border-radius: 2px;
-  background: transparent;
-  color: #fff;
-  margin-top: 40px;
-  
-}
-
-h1.head-fransis {
-  color: #FFFFFF;
-  /* font-family: Gotham; */
-  font-size: 32px;
-  font-weight: bold;
-  letter-spacing: -0.77px;
-  line-height: 44px;
-  padding-bottom: 30px;
-}
-
-p.second-para {
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 0.86px;
-  line-height: 10px;
-}
-
-
-@media(min-width:768px) and (max-width:1024px)
-{
- 
-  body
-  {
-    overflow-x: hidden !important;
-  }
-  .hero__right-container
-  {
-    right:0 !important;
-  }
-  .hero
-  {
-    width: 111vw !important;
-    background-size: 120vw !important;
-    height: 95vh;
-  }
-  .hero-second
-   {
-    width: 111vw !important;
-    background-size: 185vw !important;
-    margin-top: -40px;
-
-   }
-   .hero-second1
-   {
-       margin-top: -79px !important;
-   }
-   .hero__right-container
-   {
-     position: absolute;
-    top: 5.1rem!important;
-   }
-   .left-container
-   {
-     padding-left: 70px;
-   }
-   .right-container
-   {
-     padding-right: 70px;
-   }
-}
-
-@media (min-width: 768px) and (max-width: 812px)
-{
-.hero-second {
-    width: 148vw !important;
-    background-size: 225vw !important;
-}
-.right-container
-{
-  padding-top: 130px;
-}
-}
-
-@media(max-width:767px)
-{
-
-  html
-  {
-    overflow-x: hidden;
-  }
-  .right-container
-  {
-    width: 30%;
-    text-align: left;
-    padding-left: 30px;
-    float: left;
-  }
-  
-  
-}
-
-.hero__right-container {
-  position: absolute;
-  top: 2rem !important;
-  right: 20rem;
-  width: 25rem;
-  text-align: right;
-}
-
-p.hero__paragraph1 {
-  font-size: 14px;
-  padding-top: 30px;
-}
-
-h2.hero__big-title1 {
-  line-height: 10px;
-  padding-bottom: 20px;
-}
-
-
-@media(min-width:768px) and (max-width:775px)
-{
-
-  .hero {
-    width: 149vw !important;
-    background-size: 189vw !important;
-    height: 70vh;
-}
-.hero__right-container {
-  right: 36px !important;
-  text-align: center;
-}
-.hero__small-container {
-
-  bottom: 0rem !important;
-  left: 80% !important;
-  transform: translateX(-50%);
-}
-.hero__countdown-container
-{
-	    right: 65px !important;
-}
-}
-
-@media(max-width:767px)
-{
-  .hero-second
-  {
-    background-size: cover !important;
-    // height: 105vh !important;
-  }
-  .left-container
-  {
-    padding-left: 30px;
-    width: 30%;
-  }
-  .hero__right-container
-  {
-    right: 0 !important;
-    text-align: center !important;
-    width: auto !important;
-  }
-  .hero__big-title
-  {
-    text-align: center;
-    margin-top: 10px;
-  }
-  
-}
-
-
-p.hero__paragraph {
-  /* font-family: Lato; */
-  font-size: 14px;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 17px;
-
-}
-@media(min-width:768px)
-{
-.hero__right-container
-{
-  width: 30rem!important;
-}
-
-}
-
-@media(min-width:768px)
-{
-  .right-container
-  {
-    padding-right: 100px;
-  }
-}
-
-@media(min-width: 1440px) and (max-width: 1599px)
-{
-  .hero
-  {
-    height: 105vh !important;
-  }
-  .hero__right-container
-  {
-    right: 21rem !important;
-  }
-}
-
-@media(min-width: 1600px) and (max-width: 1920px)
-{
-  .hero
-  {
-    height: 95vh !important;
-
-  }
-  .hero__right-container
-  {
-    right: 23rem !important;
-  }
-}
-
-
-@media(min-width:340px) and (max-width:370px)
-{
-  .left-container
-  {
-    padding-left: 12px !important;
-  }
-  .right-container
-  {
-    padding-left: 12px !important;
   }
 }
