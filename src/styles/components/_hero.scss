@@ -5,7 +5,7 @@
   height: 100vh;
   display: flex;
   justify-content: flex-end;
-  align-items: flex-start;
+  align-items: center;
 
   @include respond(tab-land) {
     background-image: url("../assets/images/media-queries/hero-tab-land.jpg");
@@ -15,48 +15,57 @@
 
   @include respond(tab-port) {
     background-image: url("../assets/images/media-queries/hero-tab-port.jpg");
+    align-items: flex-start;
   }
 
   @include respond(phone-land) {
     background-image: url("../assets/images/media-queries/hero-tab-land.jpg");
-    background-position: right;
+    background-position: 20%;
     display: flex;
     justify-content: flex-end;
     align-items: center;
     padding-bottom: 2rem;
+    height: auto;
   }
 
   @include respond(phone-port) {
     background-image: url("../assets/images/media-queries/hero-tab-port.jpg");
     background-position: left;
-    justify-content: flex-end;
     align-items: flex-start;
+    height: 100vh;
+  }
+
+  @include respond(iphone-5) {
+    height: auto;
   }
 
   &__text-container {
-    width: 40rem;
+    width: 45rem;
     height: max-content;
-    margin: 10% 10% 0 0;
+    margin: 0 10% 0 0;
 
     @include respond(laptop) {
-      margin: 10% 7% 0 0;
+      margin: 0 3% 0 0;
     }
 
     @include respond(tab-land) {
-      margin: 13% 7% 0 0;
+      width: 43rem;
+      margin: 0;
+      margin-right: 2rem;
     }
 
     @include respond(tab-port) {
       width: 100%;
       text-align: center;
-      margin: 8rem 0;
+      margin-top: 5rem;
     }
 
     @include respond(phone-land) {
-      width: 43%;
+      width: 100%;
       text-align: right;
       margin: 0;
       margin-right: 4rem;
+      margin-top: 4rem;
     }
 
     @include respond(phone-port) {
@@ -67,10 +76,18 @@
   }
 
   &__second-text-container {
-    margin-top: 6rem;
+    margin-top: 4rem;
 
     @include respond(phone-land) {
       margin-top: 3rem;
+      width: 60%;
+      margin-left: auto;
+    }
+
+    @include respond(phone-port) {
+      margin-top: 3rem;
+      width: 100%;
+      margin-left: auto;
     }
   }
 
@@ -90,6 +107,10 @@
     font-size: $sub-header;
     margin-top: 1rem;
 
+    @include respond(tab-land) {
+      font-size: 5rem;
+    }
+
     @include respond(phone-land) {
       font-size: 4rem;
     }
@@ -102,6 +123,11 @@
   &__headline {
     font-size: 8rem;
     margin-top: 2rem;
+
+    @include respond(tab-land) {
+      margin-top: 2rem;
+      font-size: 6rem;
+    }
 
     @include respond(phone-land) {
       margin-top: 2rem;
@@ -120,6 +146,52 @@
       font-size: 4rem;
       line-height: 1.2;
       margin-top: 1.5rem;
+    }
+  }
+
+  .form {
+    &__cta {
+      @include respond(phone-land) {
+        text-align: end;
+      }
+
+      @include respond(phone-port) {
+        text-align: center;
+      }
+    }
+    &__container {
+      width: 80%;
+      margin-top: 5rem;
+      margin-left: 0;
+
+      @include respond(tab-land) {
+        margin-top: 4rem;
+      }
+
+      @include respond(tab-port) {
+        width: 50%;
+        margin: 0 auto;
+        margin-top: 4rem;
+      }
+
+      @include respond(phone-land) {
+        margin-left: auto;
+        margin-right: 0;
+        margin-top: 4rem;
+        padding-bottom: 4rem;
+      }
+
+      @include respond(phone-port) {
+        width: 80%;
+        margin: 3rem auto;
+        text-align: center;
+      }
+
+      @include respond(iphone-5) {
+        margin: 3rem auto 0 auto;
+        text-align: center;
+        padding-bottom: 0;
+      }
     }
   }
 }

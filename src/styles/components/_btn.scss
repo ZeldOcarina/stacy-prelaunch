@@ -1,4 +1,7 @@
 .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   box-sizing: border-box;
   height: 5rem;
   width: 22rem;
@@ -7,6 +10,7 @@
   background-color: transparent;
   color: white;
   transition: all 0.3s ease-in-out;
+  text-decoration: none;
 
   &:hover {
     color: grey;
