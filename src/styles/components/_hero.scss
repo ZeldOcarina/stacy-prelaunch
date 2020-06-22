@@ -1,5 +1,5 @@
 .hero {
-  background-image: url("https://stacy-apg.s3.amazonaws.com/stacy-power.png");
+  background-image: url("https://stacy-apg.s3.amazonaws.com/stacy-power.jpg");
   background-size: 100vw;
   background-repeat: no-repeat;
   background-position: center;
@@ -312,19 +312,20 @@ body{
 }
 .hero-second
 {
-  background-image: url("https://stacy-apg.s3.amazonaws.com/Stacey-power.png");
-  height: 600px;
-  background-size: 100vw;
+  background-image: url("https://stacy-apg.s3.amazonaws.com/stacy-apg.jpg");
+  height: 750px;
+  background-size: 123vw;
   background-repeat: no-repeat;
   background-position: center;
   width: 100vw;
   color: $white;
-      margin-top: -6px;
+      margin-top: -15px;
 }
 .hero-second1
 {
- background-image: url("https://stacy-apg.s3.amazonaws.com/stacy-pink-bg.png") !important;	
-     margin-top: -11px;
+ background-image: url("https://stacy-apg.s3.amazonaws.com/stacy-pink-bg.jpg") !important;	
+ background-size: 150vw !important;
+ height: 750px !important;
 }
 
 .hero__big-title
@@ -365,7 +366,7 @@ p.sub-hero-para {
   font-size: 13px;
   letter-spacing: 0;
   line-height: 20px;
-  padding-bottom: 25px;
+  padding-bottom: 10px;
 }
 
 button.btn-learn {
@@ -417,7 +418,7 @@ p.second-para {
   .hero-second
    {
     width: 111vw !important;
-    background-size: 118vw !important;
+    background-size: 185vw !important;
     margin-top: -40px;
 
    }
@@ -444,7 +445,11 @@ p.second-para {
 {
 .hero-second {
     width: 148vw !important;
-    background-size: 156vw !important;
+    background-size: 225vw !important;
+}
+.right-container
+{
+  padding-top: 130px;
 }
 }
 
@@ -505,7 +510,7 @@ h2.hero__big-title1 {
 }
 .hero__countdown-container
 {
-	    right: 20px !important;
+	    right: 65px !important;
 }
 }
 
@@ -514,7 +519,7 @@ h2.hero__big-title1 {
   .hero-second
   {
     background-size: cover !important;
-    height: 105vh !important;
+    // height: 105vh !important;
   }
   .left-container
   {
@@ -583,5 +588,18 @@ p.hero__paragraph {
   .hero__right-container
   {
     right: 23rem !important;
+  }
+}
+
+
+@media(min-width:340px) and (max-width:370px)
+{
+  .left-container
+  {
+    padding-left: 12px !important;
+  }
+  .right-container
+  {
+    padding-left: 12px !important;
   }
 }
