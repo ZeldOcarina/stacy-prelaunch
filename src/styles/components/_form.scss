@@ -3,7 +3,7 @@
   flex-direction: column;
 
   &__container {
-    width: 100%;
+    width: max-content;
     margin-left: auto;
     margin-top: 4rem;
 
@@ -46,20 +46,11 @@
       background-color: $white;
       color: grey;
       cursor: pointer;
-      transform: translateY(-3px);
     }
   }
 
   &__cta {
-    text-align: left;
-
-    &--bottom {
-      margin: 1rem 0 3rem 0;
-
-      @include respond(tab-land) {
-        margin: 1rem 0 2rem 0;
-      }
-    }
+    text-align: end;
 
     @include respond(tab-port) {
       text-align: center;
